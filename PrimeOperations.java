@@ -1,5 +1,6 @@
 import java.util.ArrayList; 
 import java.math.BigInteger;
+// My github repo address is https://github.com/jackwest2000/CSCE314_Project/edit/master/PrimeOperations.java
 
 /*
  *  Desc: This class generates primes, twin primes, and hexagon crosses using BigInteger data types.
