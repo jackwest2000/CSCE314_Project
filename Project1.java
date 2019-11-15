@@ -1,3 +1,4 @@
+// My github repo address is https://github.com/jackwest2000/CSCE314_Project/edit/master/PrimeOperations.java
 
 public class Project1 {
 	public static void main(String[] args) 
