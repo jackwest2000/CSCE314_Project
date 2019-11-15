@@ -1,21 +1,25 @@
+
 public class Project1 {
 	public static void main(String[] args) 
 	{
 		// Instantiate Primes Class
-		Primes p = new Primes();
+		PrimeOperations testOne = new PrimeOperations();
 		
 		// Generate Primes and test.
-		p.generatePrimes(21);
-		p.printPrimes();
+		testOne.generatePrimes(21);
+		testOne.printPrimes();
 		
 		// Generate and test Twin Primes
-		Primes testtwo = new Primes();
-		testtwo.generatePrimes(100);
-		testtwo.generateTwinPrimes();
-		testtwo.printTwins();
+		PrimeOperations testTwo = new PrimeOperations();
+		testTwo.generatePrimes(100);
+		testTwo.generateTwinPrimes();
+		testTwo.printTwins();
+		
+		// My algorithm is correct for generating primes
+		// However, it may take between 15 and 40 min for 200,000+ primes
 		
 		// Generate and test Hexagonal crosses
-		Primes testThree = new Primes();
+		PrimeOperations testThree = new PrimeOperations();
 		testThree.generatePrimes(2000);
 		testThree.generateTwinPrimes();
 		testThree.generateHexPrimes();
