@@ -1,6 +1,6 @@
-import java.util.ArrayList; 
+import java.util.ArrayList;
 import java.math.BigInteger;
-// My github repo address is https://github.com/jackwest2000/CSCE314_Project/edit/master/PrimeOperations.java
+//My github repo address is https://github.com/jackwest2000/CSCE314_Project
 
 /*
  *  Desc: This class generates primes, twin primes, and hexagon crosses using BigInteger data types.
@@ -98,20 +98,19 @@ public class PrimeOperations {
 	// Generate and store a list of primes.
 	public void generatePrimes(int count)
 	{
-		// instantiates primeList if it has not been instantiated
-		if(primeList == null)
-		{
-			primeList = new ArrayList<BigInteger>(count);
-		}
-		
+		// instantiates primeList (clearing if it has already been instantiated)
+		primeList = new ArrayList<BigInteger>(count);
 		
 		
 		// bool used to indicate if the prime factorization of a 
 		// possible prime contains numbers other than itself and 1
 		boolean unique = true;
 		
-		
 		BigInteger hold = new BigInteger("1");
+		if(count > 0)
+		{
+		//	hold = hold.add(primeList.get(primeList.size() - 1));
+		}
 		// generate the necessary number of primes
 		while(count > 0)
 		{
@@ -131,7 +130,7 @@ public class PrimeOperations {
 			// add if it is in fact prime
 			if(unique)
 			{
-				addPrime(hold);
+				primeList.add(hold);
 				count--;
 			}
 		}
@@ -140,12 +139,9 @@ public class PrimeOperations {
 	// Generate and store a list of twin primes.
 	public void generateTwinPrimes()
 	{
-		// allocate a new array if it does not already exist
-		if(twinPrimeList == null)
-		{
-			twinPrimeList = new ArrayList<Pair<BigInteger>>();
-		}
-		
+		// allocate a new array
+		twinPrimeList = new ArrayList<Pair<BigInteger>>();
+
 		Pair<BigInteger> hold;
 		for(int i = 1; i < primeList.size(); i++)
 		{
@@ -167,11 +163,9 @@ public class PrimeOperations {
 	// Generate and store the hexagon crosses, along with the two twin primes that generate the hexagon cross.
 	public void generateHexPrimes()
 	{
-		// allocate new array if it is not already allocated
-		if(hexagonCrossList == null)
-		{
-			hexagonCrossList = new ArrayList<Pair<BigInteger>>();
-		}
+		// allocate new array
+
+		hexagonCrossList = new ArrayList<Pair<BigInteger>>();
 		
 		Pair<BigInteger> hold;
 		
