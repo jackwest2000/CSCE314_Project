@@ -1,4 +1,4 @@
-// My github repo address is https://github.com/jackwest2000/CSCE314_Project/edit/master/PrimeOperations.java
+// My github repo address is https://github.com/jackwest2000/CSCE314_Project
 
 public class Project1 {
 	public static void main(String[] args) 
@@ -15,9 +15,7 @@ public class Project1 {
 		testTwo.generatePrimes(100);
 		testTwo.generateTwinPrimes();
 		testTwo.printTwins();
-		
-		// My algorithm is correct for generating primes
-		// However, it may take between 15 and 40 min for 200,000+ primes
+\
 		
 		// Generate and test Hexagonal crosses
 		PrimeOperations testThree = new PrimeOperations();
