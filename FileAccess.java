@@ -115,6 +115,7 @@ public class FileAccess {
 			// iterate through the characters in the file
 			while((c = in.read()) != -1)
 			{
+				
 				// add the characters to the input string
 				input += (char)(c);
 				
@@ -141,12 +142,12 @@ public class FileAccess {
 					commaCount++;
 					
 					// get the right hand string
-					while(commaCount < input.length() - 2)
+					while(commaCount < input.length() - 1)
 					{
 						right += input.charAt(commaCount);
 						commaCount++;
 					}
-
+					
 					// add the pair of strings and reset all variables to their defaults
 					primes.addCross(new Pair<BigInteger>(new BigInteger(left),new BigInteger(right)));
 					left = "";
