@@ -335,6 +335,7 @@ public class MainWindow extends JFrame
 		// add the button to the panel
 		gbcPanel.gridx = 0;
 		gbcPanel.gridy = 0;
+		gbcPanel.anchor = GridBagConstraints.WEST;
 		newPanel.add(btnGeneratePrimes, gbcPanel);
 		gbcDialog.gridx = 1;
 		gbcDialog.gridy = 0;
@@ -370,14 +371,14 @@ public class MainWindow extends JFrame
 		window.add(newPanel,gbcDialog);
 		
 		// creates the label that gives information on the largest prime in the list
-		lblLargestPrime = new JLabel("The largest prime has 0 digits.");
+		lblLargestPrime = new JLabel("The largest prime has " + m_Primes.sizeofLastPrime() + " digits.");
 		gbcPanel.gridx = 1;
 		gbcPanel.gridy = 0;
 		gbcPanel.anchor = GridBagConstraints.CENTER;
 		newPanel.add(lblLargestPrime, gbcPanel);
 		
 		// creates the label that gives information on the largest hexagon cross
-		lblLargestCross = new JLabel("The largest cross has 0 and 0 digits.");
+		lblLargestCross = new JLabel("The largest cross has " + m_Primes.sizeofLastCross().left() + " and " + m_Primes.sizeofLastCross().right() + " digits.");
 		gbcPanel.gridx = 1;
 		gbcPanel.gridy = -1;
 		newPanel.add(lblLargestCross, gbcPanel);
@@ -557,7 +558,7 @@ public class MainWindow extends JFrame
 		
 		// updates the size of the largest prime and the size of the largest hexagon cross
 		lblLargestPrime.setText("The largest prime has " + String.valueOf(m_Primes.sizeofLastPrime()) + " digits.");
-		lblLargestCross.setText("The largest prime has " + String.valueOf(m_Primes.sizeofLastCross().left()) + " and " + String.valueOf(m_Primes.sizeofLastCross().right()) + " digits.");
+		lblLargestCross.setText("The largest cross has " + String.valueOf(m_Primes.sizeofLastCross().left()) + " and " + String.valueOf(m_Primes.sizeofLastCross().right()) + " digits.");
  	}
 
 }
