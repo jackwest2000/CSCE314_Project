@@ -1,6 +1,4 @@
 import java.math.BigInteger;
-import java.math.MathContext;
-import java.math.RoundingMode;
 import java.math.BigDecimal;
 import java.lang.Math;
 
@@ -39,7 +37,7 @@ public class NaiveTest
 		left = left.multiply(BigDecimal.ONE.add(BigDecimal.ONE));
 		
 		// finally, find the floor of this function
-		BigInteger out = new BigInteger(Long.toString(left.ROUND_FLOOR));
+		BigInteger out = left.toBigInteger();
 		
 		// return the value
 		return out;
