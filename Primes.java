@@ -23,45 +23,27 @@ public class Primes {
 	// Add a pair to the pair list if the pair is not already present
 	public void addPair(Pair<BigInteger> pair)
 	{
-		boolean contains = false;
-		
-		// iterate through twin primes
 		for(int i = 0; i < twinPrimeList.size(); i++)
 		{
-			// if two are equal
-			if(pair.equals(twinPrimeList.get(i)));
+			if(pair.left().compareTo(twinPrimeList.get(i).left()) == 0 && pair.right().compareTo(twinPrimeList.get(i).right()) == 0)
 			{
-				contains = true;
+				return;
 			}
 		}
-		
-		// if no equal was found, add the pair 
-		if(!contains)
-		{
-			twinPrimeList.add(pair);
-		}
+		twinPrimeList.add(pair);
 	}
 
 	// Adds a pair of BigIntegers that represent a Hexagonal Cross if it is not already present.
 	public void addCross(Pair<BigInteger> pair)
 	{
-		boolean contains = false;
-		
-		// iterate through the hexagon crosses
 		for(int i = 0; i < crossList.size(); i++)
 		{
-			// if the two are equal
-			if(pair.equals(crossList.get(i)));
+			if(pair.left().compareTo(crossList.get(i).left()) == 0 && pair.right().compareTo(crossList.get(i).right()) == 0)
 			{
-				contains = true;
+				return;
 			}
 		}
-		
-		// if no equal was found, add the pair
-		if(!contains)
-		{
-			crossList.add(pair);
-		}
+		crossList.add(pair);
 	}
 	
 	
