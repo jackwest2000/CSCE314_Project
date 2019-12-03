@@ -11,16 +11,6 @@ public class Pair<T> {
 		m_right = r;
 	}
 	
-	// an equals method used for comparison
-	public boolean equals(Pair<T> check)
-	{
-		if(this.m_left == check.left() && this.m_right == check.right())
-		{
-			return true;
-		}
-		return false;
-	}
-	
 	// return left and right items in the pair respectively
 	public T left() { return m_left; }
 	public T right() {return m_right; }
