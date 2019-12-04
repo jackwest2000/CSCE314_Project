@@ -56,6 +56,7 @@ public class Primes {
 	// Empties the list of crosses.
 	public void clearCrosses()
 	{
+		twinPrimeList = new ArrayList<Pair<BigInteger>>();
 		crossList = new ArrayList<Pair<BigInteger>>();
 	}
 	
