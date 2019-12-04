@@ -27,6 +27,7 @@ public class FileAccess {
 	// false if there was any issue.
 	public static boolean loadPrimes(Primes primes, String filename)
 	{
+		primes.clearPrimes();
 		// opens the file from which the data will be read and returns
 		// false if the file is not found.
 		FileReader in;
@@ -90,6 +91,7 @@ public class FileAccess {
 	// if the primes were loaded without issue and false in any other case.
 	public static boolean loadCrosses(Primes primes, String filename)
 	{
+		primes.clearCrosses();
 		// attempts to open the file and returns false if it is 
 		// not found.
 		FileReader in;
